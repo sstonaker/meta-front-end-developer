@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+
+    --fw-reg: 300;
+    --fw-med: 700;
+    --fw-bold: 900;
+
+    --clr-light: #FFF;
+    --clr-dark: #4B5E57;
+    --clr-accent: #f1cc250b;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 2rem;
+    --fs-body: 1rem;
+    --fs-small: .9rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+    --ts-dark: 0 0 15px rgba(0, 0, 0, .5);
+    --ts-light: 0 0 15px rgba(255, 255, 255, .2);
+}
+
+a {
+    color: var(--clr-dark);
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 {
+    font-size: var(--fs-h2);
+}
+h3 { font-size: var(--fs-h3) }
+
+html {
+    font-size: var(--fs-body);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-light);
+    font-family: var(--ff-primary);
+    margin: 3rem 5% 3rem 5%;
+}
+
+main {
+    margin-top: 2rem;
+}
+header > img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+nav {
+    background-color: var(--clr-dark);
+    height: 3rem;
+    border-radius: 15px;
+    box-shadow: var(--bs);
+}
+
+nav a {
+    color: var(--clr-light);
+    text-decoration: none;
+    margin-left: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    border: var(--clr-dark) solid 1px;
+    flex: 1;
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: 15px;
+    background-color: var(--clr-accent);
+    box-shadow: var(--bs);
+}
+
+article img {
+    width: 80%;
+    box-shadow: var(--bs);
+    border-radius: 15px;
+}
+
+footer {
+    display: flex;
+    margin-top: 3rem;
+    font-size: var(--fs-small);
+}
+
+footer div {
+    flex: 1;
+}
+
+footer p {
+    text-align: right;
+}
+
+footer hr {
+    height: 5px;
+    background-color: var(--clr-dark);
+}
+
+.hours {
+    width: 75%;
+    margin: auto;
+}
+
+#banner {
+    height: 25rem;
+    background-image: url("img/pasta.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    color: var(--clr-light);
+    text-shadow: var(--bs);
+    background-blend-mode: multiply;
+}
