@@ -17,15 +17,21 @@ function App() {
       <main>
         <Nav />
         <Routes>
-          <Route path="/" element={<Header />}></Route>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <HighlightSection />
+                <TestimonialSection />
+              </>
+            }
+          ></Route>
           <Route path="/about" element={<AboutSection />}></Route>
           <Route path="/menu" element={<Menu />}></Route>
           <Route path="/reservations" element={<Reservations />}></Route>
           <Route path="/orderonline" element={<OrderOnline />}></Route>
         </Routes>
-        <HighlightSection />
-        <TestimonialSection />
-        <AboutSection />
         <Footer />
       </main>
     </Router>

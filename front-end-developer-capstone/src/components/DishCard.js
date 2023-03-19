@@ -7,7 +7,7 @@ const DishCard = ({ title, price, description, imageSrc }) => {
         <img src={imageSrc} alt="pasta dish" width="200"></img>
         <div className="card-title">
           <h3>{title}</h3>
-          <p>{price}</p>
+          <p className="price">{price}</p>
         </div>
         <p>{description}</p>
         <h4>🛵 Order a delivery</h4>

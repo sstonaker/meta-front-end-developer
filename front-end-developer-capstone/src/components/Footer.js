@@ -11,15 +11,20 @@ const Footer = () => {
       <div className="row">
         <div className="column">
           <h3>Doormat Navigation</h3>
-          <p>lorem ipsum</p>
+          <p>Home</p>
+          <p>Specials</p>
+          <p>About</p>
         </div>
         <div className="column">
           <h3>Contact</h3>
-          <p>lorem ipsum</p>
+          <p>+1 555 555 5555</p>
+          <p>contact@littlelemon.com</p>
         </div>
         <div className="column">
           <h3>Social Media</h3>
-          <p>lorem ipsum</p>
+          <p>Facebook</p>
+          <p>Instagram</p>
+          <p>Linked In</p>
         </div>
       </div>
     </footer>

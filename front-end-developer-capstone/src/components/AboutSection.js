@@ -6,7 +6,12 @@ const AboutSection = () => {
       <div>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
-        <p>lorem ipsum</p>
+        <p>
+          Ex nostrud nisi ipsum sit eu tempor enim nostrud aliqua laboris
+          nostrud minim. Aliqua ad laborum non quis occaecat et cupidatat
+          ullamco. Laborum aliquip non aliqua quis tempor magna. Commodo
+          consequat nulla id aliqua cillum deserunt sunt irure officia.
+        </p>
       </div>
       <img
         src={require("../images/chef.jpg")}
