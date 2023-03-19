@@ -1,38 +1,141 @@
-.App {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Source Sans Pro', sans-serif;
+  --ff-secondary: 'Roboto Condensed', sans-serif;
+
+  --fw-reg: 300;
+  --fw-med: 700;
+  --fw-bold: 900;
+
+  --clr-light: #FFF;
+  --clr-dark: #303030;
+  --clr-accent: #4ad1fa;
+  --clr-accent-border: rgba(74, 209, 250, .55);
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.5rem;
+  --fs-h4: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: .9rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+  --ts-dark: 0 0 15px rgba(0, 0, 0, .5);
+  --ts-light: 0 0 15px rgba(255, 255, 255, .2)
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  background-color: lightpink;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.header {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0 5rem 0;
+}
+
+.header img {
+  margin-left: 10rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: .5;
+}
+
+.testimonial-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.section-title {
+  padding-left: 15%;
+  margin-bottom: 3rem;
+}
+
+.section-title-center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about {
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem 0 5rem 0;
+}
+
+section {
+  margin: 5rem 0 5rem 0;
+}
+
+section .dishes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section .card-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+section .dish {
+  background-color: rgb(246, 246, 246);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  box-shadow: var(--bs);
+}
+
+section .dish img {
+  border-radius: 15px;
+
+}
+
+section .testimonials {
+  display: flex;
+  justify-content: space-evenly;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section .testimonial {
+  background-color: rgb(246, 246, 246);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  box-shadow: var(--bs);
 }
