@@ -139,3 +139,40 @@ section .testimonial {
   border: 1px solid rgba(0, 0, 0, 0.247);
   box-shadow: var(--bs);
 }
+
+form {
+  margin: 5rem 0 5rem 0;
+}
+
+.form-column {
+  width: 20%;
+  margin: auto;
+}
+
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: .5em;
+}
+
+.form-row > label {
+  padding: .5em 1em .5em 0;
+  flex: 1;
+}
+
+.form-row > input {
+  flex: 2;
+}
+
+.form-row > button {
+  padding: .5em;
+  margin-top: 2rem;
+}
+form button {
+  color: white;
+  font-weight: var(--fw-med);
+  background-color: green;
+  border-radius: 15px;
+  box-shadow: var(--bs);
+  width: 100px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Nav = () => {
+function Nav() {
   return (
     <nav className="nav">
       <img
@@ -10,25 +11,25 @@ const Nav = () => {
       ></img>
       <ul>
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a href="#menu">Menu</a>
+          <Link to="/menu">Menu</Link>
         </li>
         <li>
-          <a href="#home">Reservations</a>
+          <Link to="/reservations">Reservations</Link>
         </li>
         <li>
-          <a href="#home">Order Online</a>
+          <Link to="/orderonline">Order Online</Link>
         </li>
         <li>
-          <a href="#home">Login</a>
+          <Link to="/">Login</Link>
         </li>
       </ul>
     </nav>
   );
-};
+}
 export default Nav;
