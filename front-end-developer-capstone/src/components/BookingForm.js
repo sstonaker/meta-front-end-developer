@@ -1,11 +1,32 @@
 import { Formik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 
-const Reservations = () => {
+const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
+  const [time, setTime] = useState(availableTimes[0]);
+  const [date, setDate] = useState();
+  const [guests, setGuests] = useState(1);
+  const [occasion, setOccasion] = useState("Birthday");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (values) => {
+    submitData({ values });
+  };
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+    dispatchOnDateChange(e.target.value);
+  };
+
   return (
     <div>
       <Formik
-        initialValues={{ email: "", guests: "" }}
+        initialValues={{
+          date: date,
+          email: email,
+          guests: guests,
+          time: availableTimes[0],
+          occasion: occasion,
+        }}
         validate={(values) => {
           const errors = {};
           if (!values.email) {
@@ -17,12 +38,7 @@ const Reservations = () => {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
+        onSubmit={handleSubmit}
       >
         {({
           values,
@@ -37,21 +53,23 @@ const Reservations = () => {
           <form onSubmit={handleSubmit}>
             <div className="form-column">
               <div className="form-row">
-                <label for="date">Date</label>
+                <label htmlFor="date">Date</label>
                 <input
                   type="date"
                   name="date"
-                  onChange={handleChange}
+                  id="date"
+                  onChange={handleDateChange}
                   onBlur={handleBlur}
                   value={values.date}
                 />
                 {errors.date && touched.date && errors.date}
               </div>
               <div className="form-row">
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                   type="email"
                   name="email"
+                  id="email"
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.email}
@@ -59,7 +77,7 @@ const Reservations = () => {
                 {errors.email && touched.email && errors.email}
               </div>
               <div className="form-row">
-                <label for="guests">Guests</label>
+                <label htmlFor="guests">Guests</label>
                 <input
                   type="number"
                   name="guests"
@@ -68,6 +86,16 @@ const Reservations = () => {
                   value={values.guests}
                 />
                 {errors.guests && touched.guests && errors.guests}
+              </div>{" "}
+              <div className="form-row">
+                <label htmlFor="time">Choose time</label>
+                <select id="time ">
+                  {availableTimes.map((times) => (
+                    <option data-testid="booking-time-option" key={times}>
+                      {times}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className="form-row">
                 <button type="submit" disabled={isSubmitting}>
@@ -82,4 +110,4 @@ const Reservations = () => {
   );
 };
 
-export default Reservations;
+export default BookingForm;
